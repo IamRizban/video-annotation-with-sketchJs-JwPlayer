@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>HTML5 Video Annotations</title>
+        <!-- CSS -->         
+        <link href="css/video-annotation.css" rel="stylesheet" type="text/css">	
+    </head>
+    <body>
+        <!-- start left div -->
+        <div class="left_div">
+            <div class="canvas_container hide">
+                <canvas id="canvas" height="480" width="854"></canvas>				
+            </div>
+            <div id="annotating-video"></div>           
+            <div title="Error message area" id="errorMsg" style="color:Red;"></div>
+        </div>
+        <!-- end left div -->
+        <!-- start right div -->
+        <div class="right_div">
+            <div class="tools">
+                <!-- action options -->
+                <div class="margin-top-bottom annotation_actions">
+                    <a href="#canvas" data-tool="marker" class="start_annotation">Start Annotation</a>
+                    <a href="#canvas" data-tool="marker" class="marker" style="display: none;">Marker</a>
+                    <a href="#canvas" data-tool="eraser" class="eraser" style="display: none;">Eraser</a>
+                    <a href="#canvas" class="erase_all_annotations" style="display: none;">Erase all</a>
+                    <!--                    <a href="#canvas" data-download="png">Download</a>-->
+                </div>
+                <!-- Size options -->
+                <div class="margin-top-bottom annotation_sizes" style="display: none;">                    
+                    Sizes :
+                    <a href="#canvas" data-size="1"><img src="img/pencil_icon.png" alt="Pencil"/></a>
+                    <a href="#canvas" data-size="3"><img src="img/pen_icon.png" alt="Pen"/></a>
+                    <a href="#canvas" data-size="5"><img src="img/stick_icon.png" alt="Stick"/></a>
+                    <a href="#canvas" data-size="9"><img src="img/smallbrush_icon.png" alt="Small brush"/></a>
+                    <a href="#canvas" data-size="15"><img src="img/mediumbrush_icon.png" alt="Medium brush"/></a>
+                    <a href="#canvas" data-size="30"><img src="img/bigbrush_icon.png" alt="Big brush"/></a>
+                    <a href="#canvas" data-size="60"><img src="img/bucket_icon.png" alt="Huge bucket"/></a>
+                </div>
+                <!-- Color options -->
+                <div class="margin-top-bottom annotation_colors" style="display: none;">                    
+                    Colors:
+                    <a href="#canvas" data-color="#f00" style="width: 10px; background: #f00;"></a>
+                    <a href="#canvas" data-color="#ff0" style="width: 10px; background: #ff0;"></a>
+                    <a href="#canvas" data-color="#0f0" style="width: 10px; background: #0f0;"></a>
+                    <a href="#canvas" data-color="#0ff" style="width: 10px; background: #0ff;"></a>
+                    <a href="#canvas" data-color="#00f" style="width: 10px; background: #00f;"></a>
+                    <a href="#canvas" data-color="#f0f" style="width: 10px; background: #f0f;"></a>
+                    <a href="#canvas" data-color="#000" style="width: 10px; background: #000;"></a>
+                </div>
+            </div>
+        </div>
+        <img src="" class="annotation_image"/>
+        <!-- end right div -->     
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/sketch.js"></script>
+        <script type="text/javascript" src="js/jwplayer.js"></script>        
+        <script>jwplayer.key = "T3jaEZifxTgLd7HQij0SakwziGZxJstQ5+eh3Q==";</script>
+        <script type="text/javascript" src="js/video-controls.js"></script>
+    </body>
+</html>
